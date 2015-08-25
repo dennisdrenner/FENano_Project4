@@ -34,6 +34,8 @@ form {
   width: 256px;
   z-index: -1;
   will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 
 }
 
