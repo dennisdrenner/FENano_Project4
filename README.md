@@ -9,9 +9,21 @@ previously document.body.scrollTop was in the for loop, triggering layout with e
 
 (2) I set the attribute 'will-change: transform;' in the .mover class (which styles the pizzas that move around while scrolling).  This forced the pizzas onto separate layers so the entire screen wasn't continually being repainted with scrolling
 
+(3) In main.js, changed all instances of document.querySelector to document.getElementById and getElementsByClassName for improved speed.
+
+(4) Changed for loop syntax in changePizzaSizes so that end value is only calculated once (vs. at every pass through the loop).  Did same in updatePositions function
+
+(5) In function changePizzaSizes, created a variable (var container = document.getElementsByClassName("randomPizzaContainer"))  so that the DOM did not need to be accessed at every pass through the loop 
+
+(6) Moved pizzasDiv variable creation outside of the for loop in changePizzaSizes for greater efficiency.
+
+(7) Moved creation of phase var outside of for loop in updatePositions function
+
+(8) Declared phase and elem and movingPizzas variables outside of for loops
+
+########################## ORIGINAL README TEXT
 
 
-## ORIGINAL README TEXT
 
 ## Website Performance Optimization portfolio project
 
