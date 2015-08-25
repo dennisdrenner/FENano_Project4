@@ -1,5 +1,5 @@
 
-Run application by opening or dragging index.html into a web browser
+Run application by navigating to 'dist' folder and dragging index.html into a web browser.  The dist folder contains files which have been optimized by gulp. You can also run the app by navigating to the 'app' folder and dragging the index.html file into a browser, though the files in 'app' have not been optimized. 
 
 Optimizations in views/js/main.js and style.css
 
@@ -20,6 +20,19 @@ previously document.body.scrollTop was in the for loop, triggering layout with e
 (7) Moved creation of phase var outside of for loop in updatePositions function
 
 (8) Declared phase and elem and movingPizzas variables outside of for loops
+
+(9) Set backface-visibility to hidden for .mover class 
+
+(10) In function changePizzaSizes, moved var dx and newwidth out of the for loop to avoid calling layout with every pass 
+
+(11) In changePizzaSizes created the var container to avoid multiple DOM calls in the for loop 
+
+(12) In the anonymous function associated with the event listener 
+
+document.addEventListener('DOMContentLoaded', function() {
+
+I added code to calculate number of pizzas to generate based on height of the user's screen. This saved the creation of unecessary pizza elements (was originally set to 200, on my screen only 64 were needed)
+
 
 ########################## ORIGINAL README TEXT
 
